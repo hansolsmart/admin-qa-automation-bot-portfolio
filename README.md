@@ -1,5 +1,7 @@
 # Admin QA Automation Bot
 
+**[Vercel 포트폴리오 보기](https://admin-qa-portfolio.vercel.app/)**
+
 관리자가 항목을 등록·조회·수정하고, QA 대시보드에서 Playwright 시나리오를 실행하는 로컬 앱입니다. FastAPI와 SQLite가 관리 데이터 및 QA 이력을 보관하고, 별도 Worker가 각 테스트를 전용 DB와 loopback 앱에서 실행합니다.
 
 대시보드에서 **항목 등록**을 고르고 실행하면 Worker가 브라우저를 열어 로그인하고, 테스트 항목을 등록한 뒤 화면 표시와 DB 저장 건수를 확인합니다. 확인 결과로 `PASS` 또는 `FAIL`을 기록하고 로그와 스크린샷을 자동으로 남깁니다.
