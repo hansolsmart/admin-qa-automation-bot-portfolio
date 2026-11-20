@@ -29,3 +29,7 @@
 Worker 로그에는 판정 근거와 동일 키로 다른 본문을 제출했을 때의 HTTP 409 응답이 포함되어 있습니다. [공개용 Worker 로그](docs/evidence/run-3/worker-log.txt) · [판정 JSON](docs/evidence/run-3/results.json)
 
 ![장애 시나리오 3개를 선택한 QA 대시보드의 실행 #3 완료 화면](docs/evidence/run-3/dashboard.jpg)
+
+## GitHub Actions 검증
+
+2026년 11월 20일 GitHub Actions에서 **Python 테스트와 Playwright 브라우저 테스트가 모두 통과**했습니다. Docker 이미지 빌드와 Docker Compose에서 앱·Worker 기동도 확인했습니다. [성공한 실행 결과 및 로그](https://github.com/hansolsmart/admin-qa-automation-bot/actions/runs/44662514077)
