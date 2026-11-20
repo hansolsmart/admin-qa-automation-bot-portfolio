@@ -1,0 +1,26 @@
+{
+  "run_id": "3",
+  "results": [
+    {
+      "scenario_id": "TC-EX-01",
+      "status": "PASS",
+      "duration_ms": 929,
+      "detail": "First HTTP 201 aborted at browser; retry HTTP 200; same_key=True; DB rows=1",
+      "screenshot": "TC-EX-01.png"
+    },
+    {
+      "scenario_id": "TC-EX-02",
+      "status": "PASS",
+      "duration_ms": 699,
+      "detail": "Literal round trip equality: HTTP=True, DB=True, browser=True",
+      "screenshot": "TC-EX-02.png"
+    },
+    {
+      "scenario_id": "TC-EX-03",
+      "status": "PASS",
+      "duration_ms": 890,
+      "detail": "10 simultaneous requests: statuses=[200, 200, 200, 200, 200, 200, 200, 200, 200, 201], distinct IDs=1, DB rows=1",
+      "screenshot": "TC-EX-03.png"
+    }
+  ]
+}
