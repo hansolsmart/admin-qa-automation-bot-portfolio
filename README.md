@@ -24,7 +24,7 @@
 | --- | --- | --- | --- |
 | TC-EX-01 등록 응답 단절 | `PASS` · 929 ms | 서버가 등록을 마친 뒤 브라우저 응답을 끊었습니다. 같은 키로 재시도하자 HTTP 200과 최초 항목 ID가 반환됐고, DB에는 1건만 남았습니다. | [재시도 후 목록](docs/evidence/run-3/TC-EX-01.png) |
 | TC-EX-02 특수문자 입력 | `PASS` · 699 ms | 한글·따옴표·앰퍼샌드·꺾쇠가 들어간 입력이 API 응답, DB, 브라우저 표시에서 모두 원문과 일치했습니다. | [원문 표시](docs/evidence/run-3/TC-EX-02.png) |
-| TC-EX-03 중복 제출 | `PASS` · 890 ms | 등록 버튼을 10번 연속 눌렀을 때 테스트 DB에 1건만 저장됐습니다. 같은 키로 요청 10건을 동시에 보냈습니다. 신규 등록은 HTTP 201 1건, 재응답은 HTTP 200 9건이었고, 반환 ID와 DB 저장 건수는 각각 1개였습니다. | [빠른 클릭 후 목록](docs/evidence/run-3/TC-EX-03.png) |
+| TC-EX-03 중복 제출 | `PASS` · 890 ms | 등록 버튼을 10번 연속 누르는 경우와 같은 키로 요청 10건을 동시에 보내는 경우 모두 테스트 DB에 1건만 저장됐습니다. 동시 요청은 모두 같은 항목 ID를 반환했습니다(HTTP 201 1건, HTTP 200 9건). | [빠른 클릭 후 목록](docs/evidence/run-3/TC-EX-03.png) |
 
 Worker 로그에는 판정 근거와 동일 키로 다른 본문을 제출했을 때의 HTTP 409 응답이 포함되어 있습니다. [공개용 Worker 로그](docs/evidence/run-3/worker-log.txt) · [판정 JSON](docs/evidence/run-3/results.json)
 
